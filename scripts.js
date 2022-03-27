@@ -4,6 +4,7 @@ const addBtn = document.getElementById('add')
 const projectContainer = document.getElementById('projects')
 const selectProject = document.getElementsByClassName('project-name')
 const userInput = document.getElementById('userInput')
+const projectNames = document.querySelectorAll('id[id^=project-]')
 
 addBtn.addEventListener('click', ()=>{
  
@@ -19,14 +20,4 @@ addBtn.addEventListener('click', ()=>{
     userInput.value = ''
     console.log(projectName)}
 })
-    let projectInfoDiv = document.createElement('div')
-    document.body.append(projectInfoDiv)
 
-projectContainer.addEventListener('click', (e)=>{
-
-    projectInfoDiv.setAttribute('id','projectInfoDiv')
-
-    projectInfoDiv.textContent = `${e.target.id}`   
-    console.log(e.target.id)
-    
-})
